@@ -1,9 +1,8 @@
 {
     "rewrites": [
       {
-        "source": "/blog/:id",
-        "destination": "/blog/[id]"
+        "source": "/(.*)",
+        "destination": "/"
       }
     ]
   }
-  
