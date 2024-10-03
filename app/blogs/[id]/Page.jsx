@@ -81,7 +81,9 @@ export async function getStaticPaths() {
   const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/blog`);
 
   const paths = response.data.blogs.map((blog) => ({
-    params: { id: blog._id }, // Assuming the blog id is used as the URL slug
+    params: {
+      id: mongoId
+  }, // Assuming the blog id is used as the URL slug
   }));
 
   return {

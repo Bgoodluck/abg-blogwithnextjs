@@ -11,7 +11,7 @@ function Page() {
 
 
     const fetchBlog = async ()=>{
-        const response = await axios.get('https://abg-blogwithnextjs.vercel.app/admin/api/blog');
+        const response = await axios.get('/api/blog');
         setBlogs(response.data.blogs);
     }
 
